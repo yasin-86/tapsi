@@ -1,0 +1,135 @@
+@font-face {
+  font-family: light;
+  src: url(/vazir-font-v16.1.0/Vazir-Light.woff2);
+}
+@font-face {
+  font-family: medium;
+  src: url(/vazir-font-v16.1.0/Vazir-Medium.woff2);
+}
+@font-face {
+  font-family: bold;
+  src: url(/vazir-font-v16.1.0/Vazir-Bold.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  direction: rtl;
+}
+body nav {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 8vh;
+  background-color: #f8f8f8;
+  z-index: 1;
+}
+body nav .logo {
+  position: absolute;
+  right: 10%;
+}
+body nav ul {
+  position: absolute;
+  left: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 45%;
+  font-family: light;
+}
+body nav ul div {
+  width: 153px;
+  height: 44px;
+  background-color: #ff5722;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 0px 38px;
+  border-radius: 8px;
+}
+body nav ul div a {
+  color: #fff;
+}
+body nav ul a {
+  font-size: 15px;
+  color: #545454;
+}
+body section {
+  position: relative;
+  top: 8vh;
+  background-image: url(../images/banner.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+}
+body section img {
+  width: 530px;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+}
+body section .hero {
+  background-color: rgba(27, 34, 62, 0.5647058824);
+  width: 34%;
+  height: 67%;
+  position: relative;
+  top: 140px;
+  right: 150px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+body section .hero h1 {
+  font-family: bold;
+  font-size: 50px;
+  color: #fff;
+}
+body section .hero h2 {
+  font-family: bold;
+  font-size: 24px;
+  color: #fff;
+}
+body section .hero .container {
+  padding-top: 35px;
+  font-family: medium;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+body section .hero .container .flex {
+  background-color: #fff;
+  width: 235px;
+  height: 55px;
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+}
+body section .hero .container .flex a {
+  font-size: 16px;
+  color: #4d4d52;
+}
+body section .hero .container .edit {
+  background-color: rgba(27, 34, 62, 0.5764705882);
+  border: 1px solid #fff;
+  width: 235px;
+  height: 55px;
+  text-align: center;
+  padding: 16px;
+  border-radius: 12px;
+}
+body section .hero .container .edit a {
+  font-size: 16px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

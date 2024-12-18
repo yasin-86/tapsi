@@ -1,0 +1,121 @@
+@use "./typogrophy";
+@use "./reset";
+
+@mixin flex($a , $b, $c){
+    display: flex;
+    justify-content: $a;
+    align-items: $b;
+    flex-direction: $c;
+}
+@mixin text($w , $r){
+    font-size: $w;
+    color: $r;
+}
+@mixin box(){
+    width: 235px;
+    height:55px ;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+body{
+    direction: rtl;
+
+    nav{
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 8vh;
+        background-color: #f8f8f8;
+        z-index: 1;
+        .logo{
+            position: absolute;
+            right: 10%;
+        }
+        ul{
+            position: absolute;
+            left: 10%;
+            @include flex(space-between , center , row);
+            width: 45%;
+            font-family: light;
+            div{
+                width: 153px;
+                height: 44px;
+                background-color: #ff5722;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                padding: 0px 38px;
+                border-radius: 8px;
+
+                a{
+                    color: #fff;
+                }
+            }
+             a{
+                @include text(15px , #545454)
+             }
+        }
+    }
+    section{
+        position: relative;
+        top: 8vh;
+        background-image: url(../images/banner.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+         img{
+            width: 530px;
+            position: absolute;
+            left: 10%;
+            top: 15%;
+         }
+
+         .hero{
+            background-color: #1b223e90;
+            width: 34%;
+            height: 67%;
+            position: relative;
+            top: 140px;
+            right: 150px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            h1{
+                font-family: bold;
+                @include text(50px , #fff);
+            }
+            h2{
+                font-family: bold;
+                @include text(24px , #fff);
+            }
+            .container{
+                padding-top: 35px;
+                font-family: medium;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 14px;
+                .flex{
+                    background-color: #fff;
+                    @include box();
+                     a{
+                        @include text(16px , #4d4d52);
+                     }
+                }
+                .edit{
+                    background-color: #1b223e93;
+                    border: 1px solid #fff;
+                    @include box();
+                    a{
+                        @include text(16px , #fff);
+                    }
+                }
+            }
+         }
+     }
+}
